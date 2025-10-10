@@ -44,6 +44,8 @@ const Plugin = () => {
       options.path += '/';
     }
 
+    if (typeof options.loadMenuCss === 'undefined') options.loadMenuCss = true;
+
     // Set defaults
     if (options.side === undefined) options.side = 'left';
 
@@ -1209,17 +1211,22 @@ const Plugin = () => {
       deck = reveal;
       config = deck.getConfig();
       initOptions(config);
-      loadResource(options.path + 'menu.css', 'stylesheet', function () {
-        if (options.loadIcons === undefined || options.loadIcons) {
-          loadResource(
-            options.path + 'font-awesome/css/all.css',
-            'stylesheet',
-            loadPlugin
-          );
-        } else {
-          loadPlugin();
-        }
-      });
+
+      if (options.loadMenuCss) {
+        loadResource(options.path + 'menu.css', 'stylesheet', function () {
+          if (options.loadIcons === undefined || options.loadIcons) {
+            loadResource(
+              options.path + 'font-awesome/css/all.css',
+              'stylesheet',
+              loadPlugin
+            );
+          } else {
+            loadPlugin();
+          }
+        });
+      } else {
+        loadPlugin();
+      }
     },
 
     toggle: toggleMenu,

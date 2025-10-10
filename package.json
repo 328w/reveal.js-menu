@@ -1,5 +1,5 @@
 {
-  "name": "reveal.js-menu",
+  "name": "reveal.js-menu-unloadcss",
   "version": "2.1.0",
   "description": "A slideout menu for navigating reveal.js presentations",
   "scripts": {

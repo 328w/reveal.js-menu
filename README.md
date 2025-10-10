@@ -2,6 +2,8 @@
 
 A slideout menu plugin for [Reveal.js](https://github.com/hakimel/reveal.js) to quickly jump to any slide by title. Also optionally change the theme and set the default transition. [Check out the live demo](https://denehyg.github.io/reveal.js-menu)
 
+新たに`menu` option に `loadMenuCss` を追加。`false`にすることでJavaScriptから`menu.css` と `font-awesome` のCSS読み込みを無効にします。
+
 ## Installation
 
 ### Bower
