@@ -833,8 +833,8 @@ const Plugin = () => {
             '.slide-menu-panel[data-panel="Slides"] > .slide-menu-items'
           );
           var slideCount = 0;
-          selectAll('.slides > section').forEach(function (section, h) {
-            var subsections = selectAll('section', section);
+          selectAll('.slides > section:not([data-visibility])').forEach(function (section, h) {
+            var subsections = selectAll('section:not([data-visibility])', section);
             if (subsections.length > 0) {
               subsections.forEach(function (subsection, v) {
                 var type =
