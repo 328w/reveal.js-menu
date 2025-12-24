@@ -666,7 +666,7 @@ const Plugin = () => {
         return button;
       }
 
-      addToolbarButton('Slides', 'Slides', 'fa-images', 'fas', openPanel, true);
+      addToolbarButton('Slides', 'Slides', 'fa-image', 'fa', openPanel, true);
 
       if (options.custom) {
         options.custom.forEach(function (element, index, array) {
@@ -696,7 +696,7 @@ const Plugin = () => {
         id: 'close',
         class: 'toolbar-panel-button'
       });
-      button.appendChild(create('i', { class: 'fas fa-times' }));
+      button.appendChild(create('i', { class: 'fa fa-times' }));
       button.appendChild(create('br'));
       button.appendChild(
         create('span', { class: 'slide-menu-toolbar-label' }, 'Close')
