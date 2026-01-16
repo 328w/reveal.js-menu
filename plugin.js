@@ -22,19 +22,20 @@ const Plugin = () => {
 
   function scriptPath() {
     // obtain plugin path from the script element
-    var path;
+    // var path;
 
-    const script = document.querySelector('script[src$="menu.js"]');
-    if (script) {
-      var sel = document.querySelector('script[src$="menu.js"]');
-      if (sel) {
-        path = sel.src.slice(0, -7);
-      }
-    } else {
-      path = import.meta.url.slice(0, import.meta.url.lastIndexOf('/') + 1);
-    }
+    // const script = document.querySelector('script[src$="menu.js"]');
+    // if (script) {
+    //   var sel = document.querySelector('script[src$="menu.js"]');
+    //   if (sel) {
+    //     path = sel.src.slice(0, -7);
+    //   }
+    // } else {
+    //   path = import.meta.url.slice(0, import.meta.url.lastIndexOf('/') + 1);
+    // }
 
-    return path;
+    // return path;
+    return '';
   }
 
   function initOptions(config) {
